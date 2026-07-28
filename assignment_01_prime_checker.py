@@ -50,4 +50,3 @@ if is_prime(num):
     print(f"{num} is a prime number.")
 else:
     print(f"{num} is NOT a prime number.")
-//This is a commit message
