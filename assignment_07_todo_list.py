@@ -82,9 +82,7 @@
 
 def add_task(tasks):
     task = input("Enter task: ")
-
     tasks.append(task)
-
     print(f'Task added: "{task}"')
 
 
@@ -93,9 +91,9 @@ def view_tasks(tasks):
         print("Your task list is empty.")
     else:
         print("\nYour Tasks:")
-
         for i in range(len(tasks)):
             print(f"{i + 1}. {tasks[i]}")
+
 
 def delete_task(tasks):
     if len(tasks) == 0:
@@ -112,6 +110,7 @@ def delete_task(tasks):
         removed_task = tasks.pop(task_number - 1)
         print(f'Task "{removed_task}" has been removed.')
 
+
 def display_menu():
     print("\n============================")
     print("     TO-DO LIST MENU")
@@ -121,7 +120,8 @@ def display_menu():
     print("3. Delete task")
     print("4. Quit")
 
-tasks = []
+tasks = ["Sleep", "Read"]
+
 while True:
     display_menu()
 
@@ -129,16 +129,12 @@ while True:
 
     if choice == "1":
         add_task(tasks)
-
     elif choice == "2":
         view_tasks(tasks)
-
     elif choice == "3":
         delete_task(tasks)
-
     elif choice == "4":
         print("Goodbye!")
         break
-
     else:
         print("Error: Invalid menu choice. Please select 1-4.")
