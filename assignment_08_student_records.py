@@ -91,6 +91,7 @@
 # =============================================================================
 
 
+
 def add_student(students):
     name = input("Student name: ")
     student_id = int(input("Student ID: "))
@@ -113,13 +114,18 @@ def add_student(students):
 
     print(f'Student "{name}" added successfully.')
 
+
 def calculate_average(scores):
+    if len(scores) == 0:
+        return 0
+
     total = 0
 
     for score in scores:
         total += score
 
-    return total / len(score)
+    return total / len(scores)
+
 
 def display_students(students):
     if len(students) == 0:
@@ -142,6 +148,7 @@ def display_students(students):
 
     print("-" * 60)
 
+
 def student_average(students):
     student_id = int(input("Enter student ID: "))
 
@@ -153,6 +160,7 @@ def student_average(students):
 
     print("Error: Student ID not found.")
 
+
 def display_menu():
     print("\n================================")
     print("   STUDENT RECORD SYSTEM MENU")
@@ -161,6 +169,8 @@ def display_menu():
     print("2. Display all students")
     print("3. Calculate average score")
     print("4. Quit")
+
+
 students = []
 
 while True:
